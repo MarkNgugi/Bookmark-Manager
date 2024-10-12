@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  #
+
+  get "/categories", to: "categories#index"
+  get "/bookmarks", to: "bookmarks#index"
 end
