@@ -1,24 +1,21 @@
-# README
+# Database Models
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Category Model
+- **Table Name**: `categories`
+- **Columns**:
+  - `name`: string
 
-Things you may want to cover:
+## Subcategory Model
+- **Table Name**: `subcategories`
+- **Columns**:
+  - `name`: string
+  - `category_id`: integer (foreign key referencing the Category model)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Bookmark Model
+- **Table Name**: `bookmarks`
+- **Columns**:
+  - `url`: string
+  - `title`: string
+  - `description`: text
+  - `tag`: string
+  - `subcategory_id`: integer (foreign key referencing the Subcategory model)
