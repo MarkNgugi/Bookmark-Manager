@@ -15,4 +15,10 @@ Rails.application.routes.draw do
 
   get "/categories", to: "categories#index"
   get "/bookmarks", to: "bookmarks#index"
+
+  resources :categories do
+    resources :subcategories do
+      resources :bookmarks
+    end
+  end
 end
